@@ -1,0 +1,322 @@
+
+
+/***********************/
+/** AJUSTES GENERALES **/
+/***********************/
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+/*Ajustes Generales*/
+html{
+	width: 100%;
+    height: 100%;
+
+    
+}
+
+/*Ajustes Generales*/
+body{
+	background-color: gray;		
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1vw;
+}
+
+.left{
+	justify-content: left; 
+}
+
+.right{
+	display: flex; 
+	flex-flow: row-reverse;
+	align-items: center;
+
+
+}
+
+.center{
+	justify-content: center;
+}
+
+/*********/
+/** NAV **/
+/*********/
+
+nav{
+	background-color: rgba(0,0,0,0.7);
+	height: 15%;
+	width: 100%;
+
+
+	padding-left: 15%;
+	padding-right: 15%;
+
+	display: flex;
+
+	z-index: 10;
+}
+
+.innerBoxM{
+	height: 100%;
+	width: 50%;
+
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: flex;
+}
+
+.innerBoxM.left{
+
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#name{
+
+	display: inline;
+	width: fit-content;
+	font-size: 3em;
+	text-decoration: none;
+	color: white;
+	font-family: 'Righteous';
+}
+	#name:hover{
+
+		color: #3B5998;
+	}
+
+#profession{
+	font-size: 2em;
+	color: white;
+	font-family: 'Roboto';
+}
+
+.innerBoxM.right{
+
+	display:  inline-flex;
+	padding-left: 21em;
+	justify-content:space-between;
+}
+
+.menuText{
+	
+	text-decoration: none;
+	font-family: Ubuntu;
+	color: white;
+}
+	.menuText:hover{
+		
+		color: #3B5998;
+	}
+
+/**********************/
+/** BOTONES SOCIALES **/
+/**********************/
+
+.innerBoxS.left{
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+}
+
+/*Clase general*/
+.fab {
+
+	padding: 0.4em;
+	border-radius: 50%;
+	text-align: center;
+
+ 
+}
+	/*fa on hover*/
+	.fab:hover {
+	    opacity: 0.7;
+	}
+
+
+/*Clases especificas*/
+
+.fa-vimeo-v {
+  background: #3B5998;
+  color: white;
+}
+.fa-vimeo-v:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-twitter {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-linkedin-in {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin-in:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-instagram {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram:hover {
+  background: white;
+  color: #3B5998;
+}
+
+/*links de fa*/
+a.fab{
+	font-size: 2em;
+	opacity: 1;
+
+	transition: all .3s ease-in-out;
+
+	text-decoration: none;
+
+}
+	/*link on hover*/
+	a.fab:hover{
+		opacity: 1;
+	}
+
+
+	/************/
+	/** CORREO **/
+	/************/
+
+.innerBoxS.center{
+	display: flex;
+	align-items: center;
+}
+
+/*Clase general*/
+.far {
+
+	padding: 0.45em;
+	border-radius: 50%;
+
+	
+	text-align: center;
+}
+	/*fa on hover*/
+	.far:hover {
+	    opacity: 0.7;
+	}
+
+.fa-envelope {
+  background: #3B5998;
+  color: white;
+}
+.fa-envelope:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-envelope-open {
+  background: #3B5998;
+  color: white;
+}
+.fa-envelope-open:hover {
+  background: white;
+  color: #3B5998;
+}
+
+
+/*links de far*/
+a.far{
+	font-size: 2.5em;
+	opacity: 1;
+
+	transition: all .3s ease-in-out;
+
+	text-decoration: none;
+}
+	/*link on hover*/
+	a.far:hover{
+		opacity: 1;
+	}
+
+
+
+/************/
+/** FOOTER **/
+/************/
+
+footer{
+	background-color: rgba(0,0,0,1);
+	height: 10%;
+	width: 100%;
+	display: flex;
+
+	padding-left: 15%;
+	padding-right: 15%;
+
+	z-index: 10;
+
+}
+
+.innerBoxS{
+	height: 100%;
+	width: 33.333%;
+
+}
+
+#footerCR{
+	font-family: Ubuntu;
+	color: white;
+
+	user-select: none;
+    pointer-events: none;
+}
+
+/*****************************/
+/** ESPECIFICO DE LA PAGINA **/
+/*****************************/
+
+.meDivMain{
+	background-color: white;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#profilePicDiv{
+	background-color: red;
+	width: 10em;
+	height: 10em;
+
+	overflow: none;
+	border-radius: 50%;
+
+	margin-bottom: 1em;
+}
+
+#profilePic{
+
+	width: 100%;
+	border-radius: 50%;
+
+}
+
+#divContent{
+	background-color: #3B5998;
+	width: 100%;
+	height: 200%;
+
+	padding-left: 24.8em;
+}
