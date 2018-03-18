@@ -1,0 +1,707 @@
+
+
+/***********************/
+/** AJUSTES GENERALES **/
+/***********************/
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+/*Ajustes Generales*/
+html{
+	width: 100%;
+    height: 100%;
+    
+}
+
+/*Ajustes Generales*/
+body{
+	background-color: gray;		
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1vw;
+}
+
+.left{
+	justify-content: left; 
+}
+
+.right{
+	display: flex; 
+	flex-flow: row-reverse;
+	align-items: center;
+
+
+}
+
+.center{
+	justify-content: center; 
+}
+
+/*********/
+/** NAV **/
+/*********/
+
+nav{
+	background-color: rgba(0,0,0,0.7);
+	height: 15%;
+	width: 100%;
+
+
+	padding-left: 15%;
+	padding-right: 15%;
+
+	display: flex;
+
+	z-index: 10;
+}
+
+.innerBoxM{
+	height: 100%;
+	width: 50%;
+
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: flex;
+}
+
+.innerBoxM.left{
+
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#name{
+
+	display: inline;
+	width: fit-content;
+	font-size: 3em;
+	text-decoration: none;
+	color: white;
+	font-family: 'Righteous';
+}
+	#name:hover{
+
+		color: #3B5998;
+	}
+
+#profession{
+	font-size: 2em;
+	color: white;
+	font-family: 'Roboto';
+}
+
+.innerBoxM.right{
+
+	display:  inline-flex;
+	padding-left: 21em;
+	justify-content:space-between;
+}
+
+.menuText{
+	
+	text-decoration: none;
+	font-family: Ubuntu;
+	color: white;
+}
+	.menuText:hover{
+		
+		color: #3B5998;
+	}
+
+
+/**********************/
+/** BOTONES SOCIALES **/
+/**********************/
+
+.innerBoxS.left{
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+}
+
+/*Clase general*/
+.fab {
+
+	padding: 0.4em;
+	border-radius: 50%;
+	text-align: center;
+
+ 
+}
+	/*fa on hover*/
+	.fab:hover {
+	    opacity: 0.7;
+	}
+
+
+/*Clases especificas*/
+
+.fa-vimeo-v {
+  background: #3B5998;
+  color: white;
+}
+.fa-vimeo-v:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-twitter {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-linkedin-in {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin-in:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-instagram {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram:hover {
+  background: white;
+  color: #3B5998;
+}
+
+/*links de fa*/
+a.fab{
+	font-size: 2em;
+	opacity: 1;
+
+	transition: all .3s ease-in-out;
+
+	text-decoration: none;
+
+}
+	/*link on hover*/
+	a.fab:hover{
+		opacity: 1;
+	}
+
+
+	/************/
+	/** CORREO **/
+	/************/
+
+.innerBoxS.center{
+	display: flex;
+	align-items: center;
+}
+
+/*Clase general*/
+.far {
+
+	padding: 0.45em;
+	border-radius: 50%;
+
+	
+	text-align: center;
+}
+	/*fa on hover*/
+	.far:hover {
+	    opacity: 0.7;
+	}
+
+.fa-envelope {
+  background: #3B5998;
+  color: white;
+}
+.fa-envelope:hover {
+  background: white;
+  color: #3B5998;
+}
+
+.fa-envelope-open {
+  background: #3B5998;
+  color: white;
+}
+.fa-envelope-open:hover {
+  background: white;
+  color: #3B5998;
+}
+
+
+/*links de far*/
+a.far{
+	font-size: 2.5em;
+	opacity: 1;
+
+	transition: all .3s ease-in-out;
+
+	text-decoration: none;
+}
+	/*link on hover*/
+	a.far:hover{
+		opacity: 1;
+	}
+
+
+
+/************/
+/** FOOTER **/
+/************/
+
+footer{
+	background-color: rgba(0,0,0,1);
+	height: 10%;
+	width: 100%;
+	display: flex;
+
+	padding-left: 15%;
+	padding-right: 15%;
+
+	z-index: 10;
+
+}
+
+.innerBoxS{
+	height: 100%;
+	width: 33.333%;
+
+}
+
+#footerCR{
+	font-family: Ubuntu;
+	color: white;
+
+	user-select: none;
+    pointer-events: none;
+}
+
+
+/*******************/
+/** MENU CIRCULAR **/
+/*******************/
+
+#mainMenuDiv{
+
+	height: 60%;
+	width: 100%;
+
+	background-color: #444444;
+
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+
+#bigCircle{
+
+	height: 15em;
+	width: 15em;
+
+	background-color: rgba(59,89,152,255);
+
+	border-radius: 50%;
+
+	position: relative;
+
+	transform: scale(1);
+
+	animation-name: bigCircleAnim;
+	animation-duration: 5s;
+	animation-delay: 1.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes bigCircleAnim {
+    0% {
+    	background-color: rgba(59,89,152,255);
+    	transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+    	background-color: rgba(59,89,152,255);
+    }
+
+
+    90% {
+
+    	background-color: rgba(59,89,152,0.5);
+    	transform: scale(.7) rotate(360deg);
+    }
+
+    100% {
+
+    	background-color: rgba(59,89,152,0.5);
+    	transform: scale(.7) rotate(360deg);
+    }
+}
+
+
+.smallCircle{
+
+	position:  absolute;
+	top: 25%;
+	left: 25%;
+
+	height: 7.5em;
+	width: 7.5em;
+
+	background-color: rgba(59,89,152,255);
+	opacity: 0;
+	pointer-events: none;
+
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: background-color 1s;
+
+}
+
+.smallCircle:hover{
+
+	background-color: #899BC1;
+}
+
+#arribaDcha{
+
+	transform: translate(0em, 0em);	
+
+	animation-name: arribaDchaAnim;
+	animation-duration: 2s;
+	animation-delay: 1.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes arribaDchaAnim {
+    0% {
+
+    	pointer-events: none;
+    	opacity: 0;
+    	transform: translate(0em, 0em);	
+    }
+
+    35%{
+
+    	pointer-events: none;
+    	opacity: 1;
+    }
+
+    70% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, -10em);
+    }
+
+    80% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, -10em) scale(1.2);
+    }
+
+    90% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, -10em) scale(1.15);
+    }
+
+    100% {
+
+    	pointer-events: all ;
+    	opacity: 1;
+    	transform: translate(10em, -10em) scale(1.2);
+    }
+}
+
+#abajoDcha{
+	
+	transform: translate(0em, 0em);
+
+	animation-name: abajoDchaAnim;
+	animation-duration: 2s;
+	animation-delay: 2.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes abajoDchaAnim {
+    0% {
+
+    	pointer-events: none;
+    	opacity: 0;
+    	transform: translate(0em, 0em);
+    }
+
+    35%{
+
+    	pointer-events: none;
+    	opacity: 1;
+    }
+
+    70% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, 10em);
+
+    }
+
+    80% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, 10em) scale(1.2);
+    }
+
+    90% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(10em, 10em) scale(1.15);
+    }
+
+    100% {
+
+    	pointer-events: all;
+    	opacity: 1;
+    	transform: translate(10em, 10em) scale(1.2);
+    }
+}
+
+#abajoIzq{
+
+	transform: translate(0em, 0em);
+
+	animation-name: abajoIzqAnim;
+	animation-duration: 2s;
+	animation-delay: 3.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes abajoIzqAnim {
+    0% {
+
+    	pointer-events: none;
+    	opacity: 0;
+    	transform: translate(0em, 0em);
+    }
+
+    35%{
+
+    	pointer-events: none;
+    	opacity: 1;
+    }
+
+    70% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(-10em, 10em);
+    }
+
+    80% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(-10em, 10em) scale(1.2);
+    }
+
+    90% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(-10em, 10em) scale(1.15);
+    }
+
+    100% {
+
+    	pointer-events: all;
+    	opacity: 1;
+    	transform: translate(-10em, 10em) scale(1.2);
+    }
+}
+
+#arribaIzq{
+
+	transform: translate(0em, 0em);
+
+	animation-name: arribaIzqAnim;
+	animation-duration: 2s;
+	animation-delay: 4.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes arribaIzqAnim {
+    0% {
+
+    	pointer-events: none;
+    	opacity: 0;
+    	transform: translate(0em, 0em);
+    }
+
+    35%{
+
+    	pointer-events: none;
+    	opacity: 1;
+    }
+
+    70% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(-10em, -10em);
+    }
+
+    80% {
+
+    	pointer-events: none;
+    	opacity: 1;
+    	transform: translate(-10em, -10em) scale(1.2);
+    }
+
+    90% {
+
+    	pointer-events: all;
+    	opacity: 1;
+    	transform: translate(-10em, -10em) scale(1.15);
+    }
+
+    100% {
+
+    	pointer-events: all;
+    	opacity: 1;
+    	transform: translate(-10em, -10em) scale(1.2);
+    }
+}
+
+
+
+/**********/
+/** TEXT **/
+/**********/
+
+.smallCText{
+
+	color: white;
+
+	font-size: 1.3em;
+	font-family: Roboto;
+
+	opacity: 0;
+
+	pointer-events: none;
+	user-select: none;
+}
+
+#txt01{
+
+	animation-name: smallCTAnim;
+	animation-duration: 1s;
+	animation-delay: 4.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+#txt02{
+	
+	animation-name: smallCTAnim;
+	animation-duration: 1s;
+	animation-delay: 4.75s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+#txt03{
+	
+	animation-name: smallCTAnim;
+	animation-duration: 1s;
+	animation-delay: 5.25s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+#txt04{
+	
+	animation-name: smallCTAnim;
+	animation-duration: 1s;
+	animation-delay: 5.5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes smallCTAnim {
+    0% {
+
+    	opacity: 0;
+    }
+
+
+    100% {
+    	
+    	opacity: 1;
+    }
+}
+
+.bigCText{
+
+	position: relative;
+	top: 40%;
+	text-align: center;
+
+	color: white;
+
+	font-size: 3em;	
+	font-family: 'Righteous';
+
+	opacity: 1;
+
+	animation-name: bigCTAnim;
+	animation-duration: 0.75s;
+	animation-delay: 0.75s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+
+	pointer-events: none;
+	user-select: none;
+}
+
+@keyframes bigCTAnim {
+    0% {
+
+    	opacity: 1;
+    }
+
+
+    100% {
+
+    	opacity: 0;
+    }
+}
+
+
+.galleryMainDiv{
+
+	background-color: #222222;
+	width: 100%;
+	height: 50%;
+}
