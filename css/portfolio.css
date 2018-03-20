@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto|Ubuntu');
 
 /***********************/
 /** AJUSTES GENERALES **/
@@ -18,16 +18,12 @@ html{
 
 /*Ajustes Generales*/
 body{
-	background-color: gray;		
+	background-color: black;		
 
     width: 100%;
     height: 100%;
 
     font-size: 1vw;
-}
-
-.left{
-	justify-content: left; 
 }
 
 .right{
@@ -81,12 +77,12 @@ nav{
 	width: fit-content;
 	font-size: 3em;
 	text-decoration: none;
-	color: white;
+	color: #4b71c1;
 	font-family: 'Righteous';
 }
 	#name:hover{
 
-		color: #3B5998;
+		color: #899BC1;
 	}
 
 #profession{
@@ -110,9 +106,13 @@ nav{
 }
 	.menuText:hover{
 		
-		color: #3B5998;
+		color: #4b71c1;
 	}
 
+.menuText.actualPage{
+
+	color: #999999;
+}
 
 /**********************/
 /** BOTONES SOCIALES **/
@@ -292,9 +292,9 @@ footer{
 	height: 60%;
 	width: 100%;
 
-	background-color: #444444;
-
 	overflow: hidden;
+
+	position: relative;
 
 	display: flex;
 	justify-content: center;
@@ -313,13 +313,15 @@ footer{
 
 	position: relative;
 
-	transform: scale(1);
+	transform: scale(1) rotate(0deg);
 
 	animation-name: bigCircleAnim;
-	animation-duration: 5s;
-	animation-delay: 1.25s;
+	animation-duration: 3.25s;
+	animation-delay: .5s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
+
+	pointer-events: all;
 }
 
 @keyframes bigCircleAnim {
@@ -349,7 +351,7 @@ footer{
 
 .smallCircle{
 
-	position:  absolute;
+	position: absolute;
 	top: 25%;
 	left: 25%;
 
@@ -359,6 +361,7 @@ footer{
 	background-color: rgba(59,89,152,255);
 	opacity: 0;
 	pointer-events: none;
+	cursor: pointer;
 
 	border-radius: 50%;
 
@@ -366,7 +369,7 @@ footer{
 	justify-content: center;
 	align-items: center;
 
-	transition: background-color 1s;
+	transition: background-color .5s;
 
 }
 
@@ -375,13 +378,25 @@ footer{
 	background-color: #899BC1;
 }
 
+.smallCircle.pressed{
+
+	pointer-events: none;
+	background-color: white;
+	cursor: auto;
+}
+
+.smallCircle.pressed > .smallCText{
+
+	color: #3B5998;
+}
+
 #arribaDcha{
 
 	transform: translate(0em, 0em);	
 
 	animation-name: arribaDchaAnim;
 	animation-duration: 2s;
-	animation-delay: 1.25s;
+	animation-delay: .5s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -435,7 +450,7 @@ footer{
 
 	animation-name: abajoDchaAnim;
 	animation-duration: 2s;
-	animation-delay: 2.25s;
+	animation-delay: 1s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -490,7 +505,7 @@ footer{
 
 	animation-name: abajoIzqAnim;
 	animation-duration: 2s;
-	animation-delay: 3.25s;
+	animation-delay: 1.5s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -544,7 +559,7 @@ footer{
 
 	animation-name: arribaIzqAnim;
 	animation-duration: 2s;
-	animation-delay: 4.25s;
+	animation-delay: 2s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 
@@ -593,8 +608,6 @@ footer{
     }
 }
 
-
-
 /**********/
 /** TEXT **/
 /**********/
@@ -616,7 +629,7 @@ footer{
 
 	animation-name: smallCTAnim;
 	animation-duration: 1s;
-	animation-delay: 4.25s;
+	animation-delay: 3.25s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -625,7 +638,7 @@ footer{
 	
 	animation-name: smallCTAnim;
 	animation-duration: 1s;
-	animation-delay: 4.75s;
+	animation-delay: 3.5s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -634,7 +647,7 @@ footer{
 	
 	animation-name: smallCTAnim;
 	animation-duration: 1s;
-	animation-delay: 5.25s;
+	animation-delay: 3.75s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -643,7 +656,7 @@ footer{
 	
 	animation-name: smallCTAnim;
 	animation-duration: 1s;
-	animation-delay: 5.5s;
+	animation-delay: 4s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 }
@@ -698,10 +711,165 @@ footer{
     }
 }
 
+/********/
+/** BG **/
+/********/
+
+.bgImageDiv{
+
+	position: absolute;
+	width:  100%;
+	background-color: black;
+
+	z-index: -1;
+	filter: blur(.5em) grayscale(80%);
+}
+
+#bgImage{
+
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+/*************/
+/** GALLERY **/
+/*************/
 
 .galleryMainDiv{
 
 	background-color: #222222;
 	width: 100%;
-	height: 50%;
+	display: table;
+	clear:both;
+	padding: .7em 1.5em .7em 1.5em;
 }
+ 
+.column {
+	float: left;
+	flex: 27%;
+	max-width: 27%;
+	padding: 0 4px;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* Imagen CON Modal (Trigger) */
+.gImage{
+
+	display: none;
+	cursor: pointer;
+    transition: 0.3s;   
+}
+
+    /* Imagen on hover */
+    .gImage:hover {
+
+        -webkit-filter: brightness(150%);
+    }
+
+	.gImage.show{
+		display: block;
+	}
+
+video{
+
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+iframe{
+
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	
+
+	border: none;
+	
+}
+
+iframe:hover {
+
+	-webkit-filter: brightness(50%);
+}
+
+
+/* Responsive layout - coloca entre 2 a 4 columnas en funcion de la resolucion*/
+@media screen and (max-width: 800px) {
+    .column {
+	    flex: 50%;
+	    max-width: 50%;
+    }
+}
+
+/* hace que se coloquen una al lado de la otra en vez de una encima de la otra */
+@media screen and (max-width: 600px) {
+    .column {
+	    flex: 100%;
+	    max-width: 100%;
+    }
+}
+
+/***********/
+/** MODAL **/
+/***********/
+
+/* La division del Modal*/
+#modalDiv {
+    display: none; /* Oculto, lo ponemos visible por codigo */
+    position: fixed;
+    padding-top: 2em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    margin: auto;
+    overflow: auto; /* Dejamos activado el scroll, aunque no deberia ser necesario */
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;  /* Le damos la máxima prioridad */
+}
+
+/* El boton para cerrar el modal */
+#cerrar {
+	display: block;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+}
+    /* El boton on hover/focus */
+    #cerrar:hover,
+    #cerrar:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+/* Imagen del Modal */
+#imagenModal {
+    margin: auto;
+    display: block;
+    width: 70%;
+    z-index: 100;
+
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+/* Aquí declaramos que va a hacer la animacion del contenido del Modal (Zoom) */
+@keyframes zoom {
+    from {transform:scale(0.7)}
+    to {transform:scale(1)}
+}
+

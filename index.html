@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Index</title>
-	<link rel="stylesheet" href="css/index.css"/>
-	<meta charset="utf-8"/>
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+	<head>
+		<title>Index</title>
+		<link rel="stylesheet" href="css/index.css"/>
+		<meta charset="utf-8"/>
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-</head>
-<body>
-	<nav>
-		<div class="innerBoxM left">
+	</head>
+	<body>
+
+		<!-- Navegador -->
+		<nav>
+			<div class="innerBoxM left">
+				
+				<a href="index.html" id="name">Alejandro Calle</a>
+
+				<h1 id="profession"> Modeler / 3D Generalist / Student </h1>
+
+			</div>
+			<div class="innerBoxM right">
+				<a href="index.html" class="menuText actualPage">Home Page</a>
+				<a href="resume.html" class="menuText">Resume</a>
+				<a href="portfolio.html" class="menuText">Portfolio</a>
+			</div>
+		</nav>
+
+
+		<!-- Conjunto de divisiones para que el video de vimeo mantenga un escalado coherente -->
+		<div id="mainVideoDiv">
+			<div class="videobg">
+			  <div class="videobg-width">
+			    <div class="videobg-aspect">
+			      <div class="videobg-make-height">
+			        <div class="videobg-hide-controls">
+			            <iframe src="https://player.vimeo.com/video/8970192?autoplay=1&loop=1&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Pie de Pagina -->
+		<footer>
+			<div class="innerBoxS left">
+
+				<a href="#" class="fab fa-vimeo-v"></a>
+				<a href="#" class="fab fa-twitter"></a>
+				<a href="#" class="fab fa-linkedin-in"></a>
+				<a href="#" class="fab fa-instagram"></a>
+
+			</div>
+
+			<div class="innerBoxS center">
+
+				<a href="mailto:alex.calle.movil@gmail.com" class="far fa-envelope" onmouseover="changeToOpen(this)" onmouseleave="changeToClosed(this)"></a>
+				
+			</div>
 			
-			<a href="index.html" id="name">Alejandro Calle</a>
+			<div class="innerBoxS right" id="footerCR">
+				
+				© All rights reserved
 
-			<h1 id="profession"> Modeler / 3D Generalist / Student </h1>
-
-		</div>
-		<div class="innerBoxM right">
-			<a href="index.html" class="menuText">Home Page</a>
-			<a href="resume.html" class="menuText">Resume</a>
-			<a href="portfolio.html" class="menuText">Portfolio</a>
-		</div>
-	</nav>
-
-	<div id="mainVideoDiv">
-
-		<video autoplay muted loop id="mainVideo">
-		  	<source src="media/index/panel.webm" type="video/webm">
-		</video>		
-
-	</div>
-
-	<footer>
-		<div class="innerBoxS left">
-
-			<a href="#" class="fab fa-vimeo-v"></a>
-			<a href="#" class="fab fa-twitter"></a>
-			<a href="#" class="fab fa-linkedin-in"></a>
-			<a href="#" class="fab fa-instagram"></a>
-
-		</div>
-
-		<div class="innerBoxS center">
-
-			<a href="#" class="far fa-envelope" onmouseover="changeToOpen(this)" onmouseleave="changeToClosed(this)"></a>
-			
-		</div>
+			</div>
+		</footer>
 		
-		<div class="innerBoxS right" id="footerCR">
+		<!-- Script cambio del boton de correo-->
+		<script>
 			
-			© All rights reserved
+			function changeToOpen(x){
 
-		</div>
-	</footer>
+				x.className = "far fa-envelope-open";
+			}
 
+			function changeToClosed(x){
 
-	<script type="text/javascript">
-		
-		function changeToOpen(x){
+				x.className = "far fa-envelope";
+			}
 
-			x.className = "far fa-envelope-open";
-		}
-
-		function changeToClosed(x){
-
-			x.className = "far fa-envelope";
-		}
-
-	</script>
-
-
-</body>
+		</script>
+	</body>
 </html> 

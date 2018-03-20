@@ -1,106 +1,141 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="css/portfolio.css"/>
-	<meta charset="utf-8"/>
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+	<head>
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="css/portfolio.css"/>
+		<meta charset="utf-8"/>
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-</head>
-<body>
-	<nav>
-		<div class="innerBoxM left">
-			
-			<a href="index.html" id="name">Alejandro Calle</a>
+	</head>
+	<body>
 
-			<h1 id="profession"> Modeler / 3D Generalist / Student </h1>
+		<script src="scripts/portfolio/script.js"></script>
 
-		</div>
-		<div class="innerBoxM right">
-			<a href="index.html" class="menuText">Home Page</a>
-			<a href="resume.html" class="menuText">Resume</a>
-			<a href="portfolio.html" class="menuText">Portfolio</a>
-		</div>
-	</nav>
+		<!-- Navegador -->
+		<nav>
+			<div class="innerBoxM left">
+				
+				<a href="index.html" id="name">Alejandro Calle</a>
 
-	<div id="mainMenuDiv">
-
-		<div id="bigCircle">
-
-			<h2 class="bigCText">Portfolio</h2>
-
-			<div class="smallCircle" id="arribaDcha">
-
-				<h2 class="smallCText" id="txt01">All</h2>
+				<h1 id="profession"> Modeler / 3D Generalist / Student </h1>
 
 			</div>
-		
-			<div class="smallCircle" id="abajoDcha">
+			<div class="innerBoxM right">
+				<a href="index.html" class="menuText">Home Page</a>
+				<a href="resume.html" class="menuText">Resume</a>
+				<a href="portfolio.html" class="menuText actualPage">Portfolio</a>
+			</div>
+		</nav>
 
-				<h2 class="smallCText" id="txt02">Animations</h2>
+		<!-- Modal-->
+		<div id="modalDiv">
+
+			<!-- El boton para cerrar -->
+			<span id="cerrar" onclick="ModalClose()">&times;</span>
+
+			<!-- La imagen -->
+			<img id="imagenModal" src="#" alt="modal">
+
+		</div>
+
+		<!-- Menu de Circulos-->
+		<div id="mainMenuDiv">
+
+			<div id="bigCircle">
+
+				<h2 class="bigCText">Portfolio</h2>
+
+				<div class="smallCircle" id="arribaDcha" onclick="ButtonClick(this,'all')">
+
+					<h2 class="smallCText" id="txt01">All</h2>
+
+				</div>
+			
+				<div class="smallCircle" id="abajoDcha"  onclick="ButtonClick(this,'anima')">
+
+					<h2 class="smallCText" id="txt02" >Animations</h2>
+
+				</div>
+
+				
+				<div class="smallCircle" id="abajoIzq"  onclick="ButtonClick(this,'shading')">
+
+					<h2 class="smallCText" id="txt03">Shading</h2>
+
+				</div>
+
+				<div class="smallCircle" id="arribaIzq"  onclick="ButtonClick(this,'model')">
+				
+					<h2 class="smallCText" id="txt04">Modelling</h2>
+
+				</div>
+			</div>
+
+			<!-- Fondo-->
+			<div class="bgImageDiv">
+				
+				<img src="https://www.3d-wallpapers.info/wp-content/uploads/cool-abstract-wallpaper.jpg" id="bgImage" alt="Your browser does not support the image">	
 
 			</div>
 
-			
-			<div class="smallCircle" id="abajoIzq">
+		</div>
 
-				<h2 class="smallCText" id="txt03">Shading</h2>
+		<!-- Galeria de 4 columnas-->				
+		<div class="galleryMainDiv"> 			
+			<div class="column">
+			    
+				<iframe class="gImage model" width="633" height="356" style="" src="https://sketchfab.com/models/85fbcd9b6e384399b2deda15252dd5e2/embed?autospin=0.2&amp;preload=1" allowfullscreen></iframe> 
+						    
+			</div>
+
+			<div class="column">
+			    
+			    <video controls loop autoplay class="gImage anima">
+						<source src="media/portfolio/alexC6.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+				</video>
+			
+			</div> 
+
+			<div class="column">
+			
+			    <video controls loop autoplay class="gImage shading">
+						<source src="media/portfolio/alexC5.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+				</video>
+			
+			</div>
+
+			<div class="column">
+			
+			    <img src="media/portfolio/alexC4.jpeg" class="gImage model" onclick="Modal(this)" alt="Your browser does not support the image">
+			 
+			</div>
+		</div>		
+
+		<!-- Pie de Pagina-->
+		<footer>
+			
+			<div class="innerBoxS left">
+
+				<a href="#" class="fab fa-vimeo-v"></a>
+				<a href="#" class="fab fa-twitter"></a>
+				<a href="#" class="fab fa-linkedin-in"></a>
+				<a href="#" class="fab fa-instagram"></a>
 
 			</div>
 
-			<div class="smallCircle" id="arribaIzq">
+			<div class="innerBoxS center">
+
+				<a href="mailto:alex.calle.movil@gmail.com" class="far fa-envelope" onmouseover="ChangeToOpen(this)" onmouseleave="ChangeToClosed(this)"></a>
+				
+			</div>
 			
-				<h2 class="smallCText" id="txt04">Modelling</h2>
+			<div class="innerBoxS right" id="footerCR">
+				
+				© All rights reserved
 
 			</div>
-
-		</div>
-
-	</div>
-
-	<div class="galleryMainDiv">
-		
-	</div>
-
-	<footer>
-		<div class="innerBoxS left">
-
-			<a href="#" class="fab fa-vimeo-v"></a>
-			<a href="#" class="fab fa-twitter"></a>
-			<a href="#" class="fab fa-linkedin-in"></a>
-			<a href="#" class="fab fa-instagram"></a>
-
-		</div>
-
-		<div class="innerBoxS center">
-
-			<a href="#" class="far fa-envelope" onmouseover="changeToOpen(this)" onmouseleave="changeToClosed(this)"></a>
-			
-		</div>
-		
-		<div class="innerBoxS right" id="footerCR">
-			
-			© All rights reserved
-
-		</div>
-	</footer>
-
-
-	<script type="text/javascript">
-		
-		function changeToOpen(x){
-
-			x.className = "far fa-envelope-open";
-		}
-
-		function changeToClosed(x){
-
-			x.className = "far fa-envelope";
-		}
-
-	</script>
-
-
-</body>
+		</footer>
+	</body>
 </html> 
