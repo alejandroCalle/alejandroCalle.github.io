@@ -195,7 +195,7 @@ nav{
   top: 0;
   left: 0;
   border: 0 none;
-
+  filter: blur(.5em);
   pointer-events: none;
 }
 
@@ -368,3 +368,18 @@ footer{
     pointer-events: none;
 }
 
+#look{
+
+	font-family: Ubuntu;
+	color: white;
+	font-size:3em;
+	text-decoration: none;
+	 position: absolute;
+	 height: 0;
+	 top: 50%;
+	 left:30%;
+	 z-index: 15;
+}
+#look:hover{
+	color: #4b71c1;
+}

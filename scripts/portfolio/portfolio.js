@@ -93,7 +93,7 @@ function ManagerBG(x){
 
 		setTimeout(function(){
 
-		    bg.src = "http://abstracthdwallpapers.files.wordpress.com/2012/07/3-dimensional-art-abstract-specularity2560x1600.jpg";
+		    bg.src = "http://www.guoguiyan.com/data/out/21/69039765-black-abstract-wallpapers.jpg";
 		    bg.style.opacity = 1;
 
 		}, 400);
