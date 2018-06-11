@@ -93,7 +93,7 @@ function ManagerBG(x){
 
 		setTimeout(function(){
 
-		    bg.src = "https://cdnb.artstation.com/p/assets/images/images/004/593/393/large/manuel-martin-views-award-small.jpg?1484835491";
+		    bg.src = "http://www.guoguiyan.com/data/out/21/69039765-black-abstract-wallpapers.jpg";
 		    bg.style.opacity = 1;
 
 		}, 400);
@@ -102,7 +102,7 @@ function ManagerBG(x){
 
 		setTimeout(function(){
 
-		    bg.src = "http://www.vfxforge.com/wp-content/uploads/2013/01/736362_10151180433795703_755111982_o.jpg";
+		    bg.src = "https://orig00.deviantart.net/34fd/f/2015/341/f/a/abstract_4k_wallpaper_by_kanttii-d9jco4y.jpg";
 		    bg.style.opacity = 1;
 
 		}, 400);
@@ -111,7 +111,7 @@ function ManagerBG(x){
 
 		setTimeout(function(){
 
-		    bg.src = "https://i.ytimg.com/vi/H4AuZzRLves/maxresdefault.jpg";
+		    bg.src = "https://i2.wp.com/www.deteched.com/wp-content/uploads/2016/11/abstract_pyramids-2560x1440.jpg";
 		    bg.style.opacity = 1;
 		    
 		}, 400);
@@ -120,7 +120,7 @@ function ManagerBG(x){
 
 		setTimeout(function(){
 
-		    bg.src = "http://tommyrombouts.eu/wp-content/uploads/2013/02/Portfolio-versie-0142.jpg";
+		    bg.src = "https://www.3d-wallpapers.info/wp-content/uploads/cool-abstract-wallpaper.jpg";
 			bg.style.opacity = 1;
 		    
 		}, 400);
